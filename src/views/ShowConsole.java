@@ -20,5 +20,11 @@ public class ShowConsole {
         System.out.println(message);
     }
 
+    public String getName(){
+        System.out.println("Ingrese el nombre: ");
+        String nombre = sc.next();
+        System.out.println("Nombre ingresado: " + nombre);
+        return nombre;
+    }
     
 }

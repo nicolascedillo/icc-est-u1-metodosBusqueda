@@ -1,4 +1,5 @@
 import controllers.MetodosBusqueda;
+import controllers.MetodosBusquedaBinaria;
 import models.*;
 public class App {
     public static void main(String[] args) throws Exception {
@@ -12,21 +13,22 @@ public class App {
         personas[5] = new Persona(106, "Sofia");
         personas[6] = new Persona(107, "Pedro");
 
-        MetodosBusqueda metodosBusqueda = new MetodosBusqueda(personas);
+        MetodosBusqueda mB = new MetodosBusqueda(personas);
 
         int[] arreglo = {1,2,3};
         int x = 2;
 
-        int index = metodosBusqueda.busquedaLineal(arreglo, x);
+        int index = mB.busquedaLineal(arreglo, x);
         System.out.println(index);
 
-        int posicion = metodosBusqueda.findPersonByCode(106);
+        int posicion = mB.findPersonByCode(106);
         System.out.println(posicion);
+
+        MetodosBusquedaBinaria mBB = new MetodosBusquedaBinaria(personas);
+
+        mBB.showPersonByCode();
+
+        mBB.showPersonByName();
+
     }
-
-    private controllers.MetodosBusqueda metodosBusqueda;
-
-    
-
-
 }
